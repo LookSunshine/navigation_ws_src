@@ -1,0 +1,11 @@
+obstacle_range: 2.5 # 检测到2.5m范围内障碍信息，引入代价地图
+raytrace_range: 3.0 # 3m范围内未检测到障碍物，实时清除代价地图中的障碍物
+footprint: [[0.175, 0.175], [0.175, -0.175], [-0.175, -0.175], [-0.175, 0.175]] # 以机器人中心为坐标原点，机器人四周的点坐标
+#footprint_inflation: 0.01 # 机器人轮廓的膨胀层
+#robot_radius: 0.175 # 机器人半径
+inflation_radius: 1.0 # 障碍物的膨胀半径，将障碍物代价膨胀到该半径位置
+cost_scaling_factor: 3.0 # 膨胀过程中应用到代价值的比例因子
+map_type: costmap # 地图类型：代价地图
+#transform_tolerance: 1 # TF变换的允许误差
+observation_sources: scan # 传感器为激光雷达
+scan: {data_type: LaserScan, topic: /scan, marking: true, clearing: true} # 数据类型：激光数据， 传感器发布的话题名称：雷达激光，使用传感器的实时信息添加或清除代价地图中的障碍物信息：是

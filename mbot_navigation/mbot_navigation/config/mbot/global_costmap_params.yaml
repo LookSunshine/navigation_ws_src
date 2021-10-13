@@ -1,0 +1,10 @@
+global_costmap:
+  global_frame: map  # 代价地图应该运行的坐标系:map坐标系
+  robot_base_frame: base_footprint # 代价地图应该为机器人的基座的坐标系，通常设为base_link或base_footprint
+
+  update_frequency: 10.0 # 代价地图更新的频率
+  publish_frequency: 10.0 # 代价地图发布的频率
+  transform_tolerance: 0.5 # tf消息的允许滞后性
+
+  static_map: true # 确定是否由map_server提供的地图来进行代价地图的初始化;没有使用现有的地图或地图服务器的，设为false;本地地图需要根据传感器数据动态更新的时候，设为false
+ 
