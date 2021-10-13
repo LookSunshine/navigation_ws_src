@@ -39,7 +39,7 @@
 #include <costmap_2d/cost_values.h>
 
 using namespace std;
-using namespace costmap_2d;
+using namespace costmap_2d; // test
 
 namespace base_local_planner {
   CostmapModel::CostmapModel(const Costmap2D& ma) : costmap_(ma) {}
